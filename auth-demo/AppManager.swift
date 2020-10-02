@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+import Firebase
 
 let db = Firestore.firestore()
 
@@ -28,11 +29,12 @@ class AppManager {
     }
     
     static func addNewUser(uid: String, firstName: String, lastName: String, email: String) {
-        db.collection("users").document(uid).setData(["firstName": firstName, "lastName": lastName, "email": email]) { err in
+        let dataToSave: [String: Any] = ["firstName": firstName, "lastName": lastName, "email": email]
+        db.collection("users").document(uid).setData(dataToSave) { err in
             if let err = err {
-                print("Error writing document: \(err)")
+                print("Error saving new user info to Firestore: \(err)")
             } else {
-                print("Document successfully written!")
+                print("Collection/Document successfully written!")
             }
         }
     }

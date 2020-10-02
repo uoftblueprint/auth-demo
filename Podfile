@@ -8,6 +8,8 @@ target 'auth-demo' do
   # Pods for auth-demo
 pod 'Firebase/Auth'
 pod 'Firebase/Firestore'
+pod 'FirebaseFirestoreSwift'
+
 
   target 'auth-demoTests' do
     inherit! :search_paths

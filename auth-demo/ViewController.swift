@@ -37,7 +37,7 @@ class ViewController: UIViewController {
                 self.signupError.text = error!.localizedDescription
             }
             else {
-                AppManager.addNewUser(uid: authResult!.user.uid, firstName: self.signupFirstName.text!, lastName: self.signupLastName.text!, email: self.signupEmail.text!)
+                AppManager.addNewUser(uid: authResult!.user.uid as String, firstName: self.signupFirstName.text!, lastName: self.signupLastName.text!, email: self.signupEmail.text!)
                 AppManager.getCurrentUser(uid: authResult!.user.uid)
                 self.performSegue(withIdentifier: "registerToWelcome", sender: nil)
             }
