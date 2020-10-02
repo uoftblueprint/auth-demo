@@ -3,13 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		00099C71E8132AE49BD8AD97 /* Pods_auth_demoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B831D9E77688980E6EFE7D1 /* Pods_auth_demoTests.framework */; };
 		0A236C7BC1E4E5FAF5F25A21 /* Pods_auth_demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 052CF003518FD22A53631230 /* Pods_auth_demo.framework */; };
 		1DBA144E0FBDC9346C3C11B8 /* Pods_auth_demo_auth_demoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2E8A620B624418A97D7D26 /* Pods_auth_demo_auth_demoUITests.framework */; };
+		455E60042526C79300EE99CD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 455E60032526C79300EE99CD /* GoogleService-Info.plist */; };
+		455E60092526CAD900EE99CD /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E60082526CAD900EE99CD /* AppManager.swift */; };
+		455E600E2526CB0300EE99CD /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E600D2526CB0300EE99CD /* Profile.swift */; };
+		455E60132526CD0A00EE99CD /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455E60122526CD0A00EE99CD /* WelcomeVC.swift */; };
 		456BF2922526C1C200C4C8B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456BF2912526C1C200C4C8B0 /* AppDelegate.swift */; };
 		456BF2942526C1C200C4C8B0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456BF2932526C1C200C4C8B0 /* SceneDelegate.swift */; };
 		456BF2962526C1C200C4C8B0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456BF2952526C1C200C4C8B0 /* ViewController.swift */; };
@@ -42,6 +46,10 @@
 		0B2E8A620B624418A97D7D26 /* Pods_auth_demo_auth_demoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_auth_demo_auth_demoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		240529D457863CA66D693ED0 /* Pods-auth-demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-auth-demo.debug.xcconfig"; path = "Target Support Files/Pods-auth-demo/Pods-auth-demo.debug.xcconfig"; sourceTree = "<group>"; };
 		3B831D9E77688980E6EFE7D1 /* Pods_auth_demoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_auth_demoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		455E60032526C79300EE99CD /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		455E60082526CAD900EE99CD /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		455E600D2526CB0300EE99CD /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		455E60122526CD0A00EE99CD /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		456BF28E2526C1C200C4C8B0 /* auth-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "auth-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		456BF2912526C1C200C4C8B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		456BF2932526C1C200C4C8B0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +109,6 @@
 				98B4530ABB21BF90E3C8BA33 /* Pods-auth-demoTests.debug.xcconfig */,
 				FC850AFC266E91E458486355 /* Pods-auth-demoTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -133,10 +140,14 @@
 				456BF2912526C1C200C4C8B0 /* AppDelegate.swift */,
 				456BF2932526C1C200C4C8B0 /* SceneDelegate.swift */,
 				456BF2952526C1C200C4C8B0 /* ViewController.swift */,
+				455E60122526CD0A00EE99CD /* WelcomeVC.swift */,
 				456BF2972526C1C200C4C8B0 /* Main.storyboard */,
+				455E600D2526CB0300EE99CD /* Profile.swift */,
+				455E60082526CAD900EE99CD /* AppManager.swift */,
 				456BF29A2526C1C300C4C8B0 /* Assets.xcassets */,
 				456BF29C2526C1C300C4C8B0 /* LaunchScreen.storyboard */,
 				456BF29F2526C1C300C4C8B0 /* Info.plist */,
+				455E60032526C79300EE99CD /* GoogleService-Info.plist */,
 			);
 			path = "auth-demo";
 			sourceTree = "<group>";
@@ -278,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				456BF29E2526C1C300C4C8B0 /* LaunchScreen.storyboard in Resources */,
+				455E60042526C79300EE99CD /* GoogleService-Info.plist in Resources */,
 				456BF29B2526C1C300C4C8B0 /* Assets.xcassets in Resources */,
 				456BF2992526C1C200C4C8B0 /* Main.storyboard in Resources */,
 			);
@@ -408,8 +420,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				456BF2962526C1C200C4C8B0 /* ViewController.swift in Sources */,
+				455E600E2526CB0300EE99CD /* Profile.swift in Sources */,
 				456BF2922526C1C200C4C8B0 /* AppDelegate.swift in Sources */,
+				455E60132526CD0A00EE99CD /* WelcomeVC.swift in Sources */,
 				456BF2942526C1C200C4C8B0 /* SceneDelegate.swift in Sources */,
+				455E60092526CAD900EE99CD /* AppManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
